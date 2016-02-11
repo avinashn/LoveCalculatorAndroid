@@ -22,30 +22,25 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
         Button cal = (Button) findViewById(R.id.resbtn);
         final TextView res = (TextView) findViewById(R.id.resview);
         final EditText name = (EditText) findViewById(R.id.nameField);
         final EditText cname = (EditText) findViewById(R.id.crushnameField);
+
+
         cal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Editable n = name.getText();
                 Editable cn = cname.getText();
-                String concat =  String.valueOf(n).concat(String.valueOf(cn)).toUpperCase();
+                String concat = String.valueOf(n).concat(String.valueOf(cn)).toUpperCase();
                 int sum = 0;
                 for (int i = 0; i < concat.length(); i++) {
                     char character = concat.charAt(i);
                     int ascii = (int) character;
                     sum += ascii;
-                }res.setText("The love between " + n + " and " + cn + " is " + sum % 100 + "%");
+                }
+                res.setText("The love between " + n + " and " + cn + " is " + sum % 100 + "%");
             }
         });
     }
