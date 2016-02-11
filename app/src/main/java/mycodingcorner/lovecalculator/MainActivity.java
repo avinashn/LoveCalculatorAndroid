@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,7 +33,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Editable n = name.getText();
+                String nn = String.valueOf(n);
                 Editable cn = cname.getText();
+                String cnn = String.valueOf(cn);
+                if (nn.equals(" ")|| cnn.equals(" ")){
+                    Toast.makeText(MainActivity.this ,"Please enter alphabets only" ,Toast.LENGTH_LONG).show();
+                }
                 String concat = String.valueOf(n).concat(String.valueOf(cn)).toUpperCase();
                 int sum = 0;
                 for (int i = 0; i < concat.length(); i++) {
