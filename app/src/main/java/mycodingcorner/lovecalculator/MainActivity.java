@@ -1,8 +1,6 @@
 package mycodingcorner.lovecalculator;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
@@ -28,25 +26,54 @@ public class MainActivity extends AppCompatActivity {
         final EditText name = (EditText) findViewById(R.id.nameField);
         final EditText cname = (EditText) findViewById(R.id.crushnameField);
 
-
+       /* name.setFilters(new InputFilter[] {
+                new InputFilter() {
+                    public CharSequence filter(CharSequence src, int start,
+                                               int end, Spanned dst, int dstart, int dend) {
+                        if(src.equals("")){ // for backspace
+                            return src;
+                        }
+                        if(src.toString().matches("[a-zA-Z ]+")){
+                            return src;
+                        }
+                        return "";
+                    }
+                }
+        });
+        cname.setFilters(new InputFilter[] {
+                new InputFilter() {
+                    public CharSequence filter(CharSequence src, int start,
+                                               int end, Spanned dst, int dstart, int dend) {
+                        if(src.equals("")){ // for backspace
+                            return src;
+                        }
+                        if(src.toString().matches("[a-zA-Z ]+")){
+                            return src;
+                        }
+                        return "";
+                    }
+                }
+        });*/
         cal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Editable n = name.getText();
-                String nn = String.valueOf(n);
+
                 Editable cn = cname.getText();
-                String cnn = String.valueOf(cn);
-                if (nn.equals(" ")|| cnn.equals(" ")){
-                    Toast.makeText(MainActivity.this ,"Please enter alphabets only" ,Toast.LENGTH_LONG).show();
-                }
+
+
                 String concat = String.valueOf(n).concat(String.valueOf(cn)).toUpperCase();
-                int sum = 0;
-                for (int i = 0; i < concat.length(); i++) {
-                    char character = concat.charAt(i);
-                    int ascii = (int) character;
-                    sum += ascii;
+                if ((concat.length() == 0) ) {
+                    Toast.makeText(MainActivity.this, "Please fill the fields ", Toast.LENGTH_LONG).show();
+                } else {
+                    int sum = 0;
+                    for (int i = 0; i < concat.length(); i++) {
+                        char character = concat.charAt(i);
+                        int ascii = (int) character;
+                        sum += ascii;
+                    }
+                    res.setText("The love between " + n + " and " + cn + " is " + sum % 100 + "%");
                 }
-                res.setText("The love between " + n + " and " + cn + " is " + sum % 100 + "%");
             }
         });
     }

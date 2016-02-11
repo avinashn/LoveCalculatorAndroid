@@ -4,92 +4,104 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
-
     android:background="@drawable/bk"
+    android:gravity="center"
     android:orientation="vertical"
-    android:weightSum="5"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="mycodingcorner.lovecalculator.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <LinearLayout
+    <!--<LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:weightSum="100">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">-->
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="50"
-            android:text="Enter your name "
-            android:textColor="#FFF"
-            android:textSize="20sp" />
+    <!--  <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="50"
+          android:text="Enter your name "
+          android:textColor="#FFF"
+          android:textSize="20sp" />-->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFF"
+        android:textColorHint="@android:color/white">
 
         <EditText
             android:id="@+id/nameField"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="50"
-            android:digits=" abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:background="@android:color/transparent"
             android:ems="10"
+            android:gravity="center"
+            android:hint="Enter your name"
             android:inputType="textPersonName"
             android:textColor="#FFF"
-            android:textSize="20sp" />
-    </LinearLayout>
+            android:textColorHint="@android:color/white"
+            android:textSize="25sp"
+           />
+    </android.support.design.widget.TextInputLayout>
+    <!-- </LinearLayout>
 
-    <LinearLayout
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center"
+         android:orientation="horizontal">-->
+
+    <!--  <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="50"
+          android:text="Enter your crush name "
+          android:textColor="#FFF"
+          android:textSize="20sp" />-->
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:weightSum="100">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="50"
-            android:text="Enter your crush name "
-            android:textColor="#FFF"
-            android:textSize="20sp" />
+        android:layout_height="wrap_content"
+        android:textColor="#FFF"
+        android:textColorHint="@android:color/white">
 
         <EditText
             android:id="@+id/crushnameField"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="50"
-            android:digits=" abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:textColor="#FFF"
-            android:textSize="20sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="3"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/resbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@android:color/transparent"
-            android:text="Calculate"
-            android:textColor="@android:color/white"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/resview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:ems="10"
             android:gravity="center"
+            android:hint="Enter your crush name"
+            android:inputType="textPersonName"
             android:textColor="#FFF"
-            android:textSize="20sp" />
-    </LinearLayout>
+            android:textColorHint="@android:color/white"
+            android:textSize="25sp" />
+    </android.support.design.widget.TextInputLayout>
+    <!-- </LinearLayout>
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+         android:orientation="vertical">-->
+
+    <Button
+        android:id="@+id/resbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:text="Calculate"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/resview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#FFF"
+        android:textSize="20sp" />
+    <!-- </LinearLayout>-->
+
 </LinearLayout>
