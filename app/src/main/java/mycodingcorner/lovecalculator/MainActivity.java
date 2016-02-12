@@ -26,44 +26,13 @@ public class MainActivity extends AppCompatActivity {
         final EditText name = (EditText) findViewById(R.id.nameField);
         final EditText cname = (EditText) findViewById(R.id.crushnameField);
 
-       /* name.setFilters(new InputFilter[] {
-                new InputFilter() {
-                    public CharSequence filter(CharSequence src, int start,
-                                               int end, Spanned dst, int dstart, int dend) {
-                        if(src.equals("")){ // for backspace
-                            return src;
-                        }
-                        if(src.toString().matches("[a-zA-Z ]+")){
-                            return src;
-                        }
-                        return "";
-                    }
-                }
-        });
-        cname.setFilters(new InputFilter[] {
-                new InputFilter() {
-                    public CharSequence filter(CharSequence src, int start,
-                                               int end, Spanned dst, int dstart, int dend) {
-                        if(src.equals("")){ // for backspace
-                            return src;
-                        }
-                        if(src.toString().matches("[a-zA-Z ]+")){
-                            return src;
-                        }
-                        return "";
-                    }
-                }
-        });*/
         cal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Editable n = name.getText();
-
                 Editable cn = cname.getText();
-
-
                 String concat = String.valueOf(n).concat(String.valueOf(cn)).toUpperCase();
-                if ((concat.length() == 0) ) {
+                if ((concat.length() == 0)) {
                     Toast.makeText(MainActivity.this, "Please fill the fields ", Toast.LENGTH_LONG).show();
                 } else {
                     int sum = 0;

@@ -11,18 +11,6 @@
     tools:context="mycodingcorner.lovecalculator.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <!--<LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">-->
-
-    <!--  <TextView
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_weight="50"
-          android:text="Enter your name "
-          android:textColor="#FFF"
-          android:textSize="20sp" />-->
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,29 +23,15 @@
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:ems="10"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
             android:gravity="center"
             android:hint="Enter your name"
             android:inputType="textPersonName"
             android:textColor="#FFF"
             android:textColorHint="@android:color/white"
-            android:textSize="25sp"
-           />
+            android:textSize="25sp" />
     </android.support.design.widget.TextInputLayout>
-    <!-- </LinearLayout>
 
-     <LinearLayout
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:gravity="center"
-         android:orientation="horizontal">-->
-
-    <!--  <TextView
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_weight="50"
-          android:text="Enter your crush name "
-          android:textColor="#FFF"
-          android:textSize="20sp" />-->
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -71,19 +45,13 @@
             android:background="@android:color/transparent"
             android:ems="10"
             android:gravity="center"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
             android:hint="Enter your crush name"
             android:inputType="textPersonName"
             android:textColor="#FFF"
             android:textColorHint="@android:color/white"
             android:textSize="25sp" />
     </android.support.design.widget.TextInputLayout>
-    <!-- </LinearLayout>
-
-     <LinearLayout
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:layout_gravity="center"
-         android:orientation="vertical">-->
 
     <Button
         android:id="@+id/resbtn"
@@ -102,6 +70,6 @@
         android:gravity="center"
         android:textColor="#FFF"
         android:textSize="20sp" />
-    <!-- </LinearLayout>-->
+
 
 </LinearLayout>
