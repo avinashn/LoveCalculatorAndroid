@@ -31,10 +31,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Editable n = name.getText();
                 Editable cn = cname.getText();
-                String concat = String.valueOf(n).concat(String.valueOf(cn)).toUpperCase();
-                if ((concat.length() == 0)) {
-                    Toast.makeText(MainActivity.this, "Please fill the fields ", Toast.LENGTH_LONG).show();
+                if (n.length() == 0 || cn.length() == 0) {
+                    Toast.makeText(MainActivity.this, "Please fill both the fields ", Toast.LENGTH_LONG).show();
                 } else {
+                    String concat = String.valueOf(n).concat(String.valueOf(cn)).toUpperCase();
                     int sum = 0;
                     for (int i = 0; i < concat.length(); i++) {
                         char character = concat.charAt(i);
