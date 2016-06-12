@@ -29,12 +29,13 @@ public class MainActivity extends AppCompatActivity {
         cal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                res.setText("");
                 Editable n = name.getText();
                 Editable cn = cname.getText();
-                if (n.length() == 0 || cn.length() == 0) {
+                String concat = String.valueOf(n).concat(String.valueOf(cn)).toUpperCase();
+                if ((n.toString().trim().length() == 0) || (cn.toString().trim().length() == 0)) {
                     Toast.makeText(MainActivity.this, "Please fill both the fields ", Toast.LENGTH_LONG).show();
                 } else {
-                    String concat = String.valueOf(n).concat(String.valueOf(cn)).toUpperCase();
                     int sum = 0;
                     for (int i = 0; i < concat.length(); i++) {
                         char character = concat.charAt(i);
